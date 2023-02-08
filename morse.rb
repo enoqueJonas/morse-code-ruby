@@ -1,4 +1,4 @@
-$morse_code = {
+MORSE_CODE = {
   '.-' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
@@ -25,17 +25,17 @@ $morse_code = {
   '-..-' => 'X',
   '-.--' => 'Y',
   '--..' => 'Z'
-}
+}.freeze
 
 def decode_letter(code = '')
-  print $morse_code[code]
+  print MORSE_CODE[code]
 end
 
 def decode_word(word)
   codearr = word.split
   res = ''
-  codearr.each { |c| res += $morse_code[c] }
-  print res + ' '
+  codearr.each { |c| res += MORSE_CODE[c] }
+  print "#{res} "
 end
 
 def decode_phrase(code)
