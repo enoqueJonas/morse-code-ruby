@@ -28,7 +28,18 @@ $morse_code = {
 }
 
 def decode_letter(code='')
-    print "#$morse_code[code]"
+    print $morse_code[code]
+end
+
+def decode_word(word)
+    _codearr = word.split
+    _res = ''
+    _codearr.each{|c| _res+= $morse_code[c]}
+    print _res + " "
 end
 
 decode_letter(".-")
+
+decode_word("-..- -.--")
+
+decode_phrase('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
