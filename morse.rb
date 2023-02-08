@@ -38,6 +38,11 @@ def decode_word(word)
     print _res + " "
 end
 
+def decode_phrase(code)
+    _codearr = code.split"   "
+    _codearr.each{|word| decode_word word}
+end
+
 decode_letter(".-")
 
 decode_word("-..- -.--")
