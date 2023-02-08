@@ -27,19 +27,19 @@ $morse_code = {
   '--..' => 'Z'
 }
 
-def decode_letter(code = "")
+def decode_letter(code = '')
   print $morse_code[code]
 end
 
 def decode_word(word)
   codearr = word.split
-  res = ""
+  res = ''
   codearr.each { |c| res += $morse_code[c] }
-  print res + " "
+  print res + ' '
 end
 
 def decode_phrase(code)
-  codearr = code.split "   "
+  codearr = code.split '  '
   codearr.each { |word| decode_word word }
 end
 
